@@ -5,6 +5,7 @@ body{
 }
 .navbar{
   background: linear-gradient(45deg,#313131,#222831,#393E46);
+  z-index: 2;
 }
 .nav-link{
    color:white;
@@ -101,7 +102,18 @@ right:10%;
   text-decoration: none;
   color:rgb(16, 233, 179);
 }
-
+.close-navbar-toggler{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index:1;
+  cursor:pointer;
+}
+.close-navbar-toggler.collapsed{
+  z-index:-1;
+}
 
 * Forms */
 .form .form-group {

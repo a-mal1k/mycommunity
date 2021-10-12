@@ -6,13 +6,13 @@ function Navbar({isLoggedin, setLoggedIn}) {
 
     <ul className="navbar-nav">
     <li className="nav-item">
-      <Link to='/login' className="nav-link">
+      <Link to='/login' className="nav-link" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <i className='fas fa-sign-in-alt' />
         <span className='hide-sm'> Login</span>
       </Link>
     </li>
     <li className="nav-item">
-      <Link to='/register'className="nav-link">
+      <Link to='/register'className="nav-link" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <i className='fas fa-user-check' />
         <span className='hide-sm'> Register</span>
       </Link>
@@ -23,23 +23,24 @@ function Navbar({isLoggedin, setLoggedIn}) {
   const authUser = (
     <ul className="navbar-nav">
     <li className="nav-item"> 
-      <Link to='#' className="nav-link"><i className="fas fa-user-friends" />
+      <Link to='#' className="nav-link" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"><i className="fas fa-user-friends" />
        <span className='hide-sm'> People</span>
       </Link>
     </li>
     <li className="nav-item">
-      <Link to='#' className="nav-link"><i className='fas fa-user' />
+      <Link to='#' className="nav-link" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"><i className='fas fa-user' />
         <span className='hide-sm'> My Profile</span>
       </Link>
     </li>
     <li className="nav-item">
-      <Link to='/' onClick={() =>setLoggedIn(false)} className="nav-link">
+      <Link to='/' onClick={() =>setLoggedIn(false)} data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" className="nav-link">
         <i className='fas fa-sign-out-alt' />
         <span className='hide-sm'> Logout</span>
       </Link>
     </li>
   </ul>
   );
+
     return (
         <nav className="navbar navbar-expand-sm  p-2">
              <div className="container-fluid">

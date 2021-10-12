@@ -42,6 +42,7 @@ function Login({isLoggedin, setLoggedIn}) {
             name="email"
             value={email}
             onChange={onChange}
+            autoComplete="off"
             required
           />
         </div>
@@ -52,6 +53,7 @@ function Login({isLoggedin, setLoggedIn}) {
             name="password"
             value={password}
             onChange={onChange}
+            autoComplete="off"
             minLength="6"
           />
         </div>

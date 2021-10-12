@@ -39,13 +39,14 @@ function Register({isLoggedin, setLoggedIn}) {
       <p className="lead">
         <i className="fas fa-register" /> Fill details and sign up. 
       </p>
-      <form className="form" onSubmit={onSubmit}>
+      <form autoComplete="off" className="form" onSubmit={onSubmit}>
       <div className="form-group">
           <input
             type="name"
             placeholder="Enter your name"
             name="name"
             value={name}
+            autoComplete="off"
             onChange={onChange}
             required
           />
@@ -56,6 +57,7 @@ function Register({isLoggedin, setLoggedIn}) {
             placeholder="Email Address"
             name="email"
             value={email}
+            autoComplete="off"
             onChange={onChange}
             required
           />
@@ -76,6 +78,7 @@ function Register({isLoggedin, setLoggedIn}) {
             placeholder="Enter your city/state"
             name="location"
             value={location}
+            autoComplete="off"
             onChange={onChange}
           />
         </div>
@@ -86,6 +89,7 @@ function Register({isLoggedin, setLoggedIn}) {
             name="password"
             value={password}
             onChange={onChange}
+            autoComplete="off"
             minLength="6"
           />
         </div>
