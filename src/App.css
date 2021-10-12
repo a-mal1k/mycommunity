@@ -1,3 +1,131 @@
-.App {
-  text-align: center;
+body{
+  padding:0;
+  margin: 0;
+
 }
+.navbar{
+  background: linear-gradient(45deg,#313131,#222831,#393E46);
+}
+.nav-link{
+   color:white;
+   
+}
+.nav-link:hover{
+   color:rgb(32, 230, 187)
+}
+
+
+.navbar-brand{
+font-size: xx-large;
+background: -webkit-linear-gradient(#eee, #333);
+background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.navbar-brand:hover{
+  font-size: xx-large;
+background: -webkit-linear-gradient(rgb(32, 230, 187), rgb(87, 56, 56));
+background-clip: border-box;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+#collapsibleNavbar{
+   justify-content: flex-end;
+}
+p,h5{
+   color:black;
+}
+.linkto{
+ text-decoration: none;
+ color:black;
+ font-size: large;
+ font-family: cursive;
+}
+.landing{
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+background: url('./components/images/landing.jpg') no-repeat center/cover;
+  left:0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.landing-inner {
+color: #fff;
+width: 80%;
+height: 100%;
+margin: auto auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.inner{
+display: flex;
+position: absolute;
+left: 30%; 
+right: 30%; 
+top:15%;
+box-shadow: 3px 2px 2px #698686;
+flex-direction: column;
+background: rgba(0, 0, 0, 0.233);
+text-align: center;
+border: 2px inset #4b5f5f;
+border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+.inner{
+left:10%;
+right:10%;
+}
+}
+
+.lead {
+  font-size: 1.5rem;
+  color:white;   
+}
+.lead, .leadHead{
+  font-family: 'serif';
+  color:white;
+   text-shadow: 2px 2px 8px black;
+}
+.footer{
+  background: linear-gradient(45deg,#313131,#222831,#393E46);
+  color: rgb(255, 255, 255);
+}
+.footer a{
+  text-decoration: none;
+  color:rgb(16, 233, 179);
+}
+
+
+* Forms */
+.form .form-group {
+margin: 1.2rem 0;
+
+}
+
+.form .form-text {
+display: block;
+margin-top: 0.3rem;
+color: black;
+padding: 1rem;
+}
+
+.form input{
+padding: 2px;
+margin: 5px auto;
+display: block;
+width: 80%;
+padding: 0.4rem;
+font-size: 1.2rem;
+border: .5px solid #000;
+border-radius: 5px;
+box-shadow: 0px 1px 3px #111414;
+background-color: rgba(255, 255, 255, 0.582);
+}
+
