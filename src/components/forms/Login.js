@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
+import {login} from '../../redux/action'
+import {useSelector, useDispatch} from 'react-redux'
 
-function Login({isLoggedin, setLoggedIn}) {
+function Login() {
+  const isLogged = useSelector(state => state.isLoggedin)
+  const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -20,11 +24,11 @@ function Login({isLoggedin, setLoggedIn}) {
           email:'',
           password:''
         })
-        setLoggedIn(true);
-        console.log("in login component"+isLoggedin);
+        dispatch(login());
+        console.log("in login component inside submit button"+isLogged);
       };
-
-      if (isLoggedin) {
+    console.log("in login component"+isLogged)
+      if (isLogged===true) {
         return <Redirect to="/dashboard" />
     }
     return (

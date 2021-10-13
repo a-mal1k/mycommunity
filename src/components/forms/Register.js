@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
+import {register} from '../../redux/action'
+import {useSelector, useDispatch} from 'react-redux'
 
-function Register({isLoggedin, setLoggedIn}) {
+function Register() {
+  const isLogged = useSelector(state => state.isLoggedin);
+  const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -26,12 +30,13 @@ function Register({isLoggedin, setLoggedIn}) {
             location:'',
             password:''
         })
-     setLoggedIn(true);
-     console.log("in register component"+isLoggedin);
+     dispatch(register())
+     console.log("in register component inside submit button"+isLogged);
       };
-      if (isLoggedin) {
+      if (isLogged===true) {
         return <Redirect to="/dashboard" />
     }
+    console.log("in register component"+isLogged);
     return (
         <div className="landing">
             <div className="inner">
