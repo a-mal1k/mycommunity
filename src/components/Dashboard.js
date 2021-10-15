@@ -1,9 +1,16 @@
 import React from 'react'
-
-function Dashboard(props) {
+import {useSelector} from 'react-redux'
+function Dashboard() {
+    const state = useSelector(state => state.data)
     return (
-        <div>
-            Hello {props.name}
+        <div className="container">
+            <div className="dashboard">
+            <h1>My Profile</h1>
+            <p>Name: {state.name}</p>
+            <p>Email:  {state.email}</p>
+            <p>Mobile: {state.mobile}</p>
+            <p>Location: {state.location}</p>
+            </div>
         </div>
     )
 }

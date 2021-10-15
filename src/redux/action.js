@@ -2,10 +2,12 @@ export const LOGIN = 'login';
 export const REGISTER = 'register'
 export const LOGOUT = 'logout'
 
-export const login = ()=>{
+export const login = (data)=>{
     return {
         type:LOGIN,
-        info:'Logged in'
+        info:'Logged in',
+        payload:data,
+        user:data
     }
 }
 export const logout = ()=>{
@@ -14,9 +16,11 @@ export const logout = ()=>{
         info:'Logged out'
     }
 }
-export const register = ()=>{
+export const register = (data)=>{
     return {
         type:REGISTER,
-        info:'Registered'
+        info:'Registered',
+        payload:data,
+        user:data
     }
 }

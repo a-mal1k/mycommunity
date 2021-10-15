@@ -9,7 +9,7 @@ function Navbar() {
   const dispatch = useDispatch();
   const guestUser = (
 
-    <ul className="navbar-nav">
+    <ul className="navbar-nav ">
     <li className="nav-item">
       <Link to='/login' className="nav-link">
         <i className='fas fa-sign-in-alt' />
@@ -26,17 +26,16 @@ function Navbar() {
   );
  const setLogout = ()=>{
    dispatch(logout());
-   console.log("logged out "+isLogged)
  }
   const authUser = (
-    <ul className="navbar-nav">
+    <ul className="navbar-nav ">
     <li className="nav-item"> 
       <Link to='/people' className="nav-link"><i className="fas fa-user-friends" />
        <span className='hide-sm'> People</span>
       </Link>
     </li>
     <li className="nav-item">
-      <Link to='#' className="nav-link"><i className='fas fa-user' />
+      <Link to='/dashboard' className="nav-link"><i className='fas fa-user' />
         <span className='hide-sm'> My Profile</span>
       </Link>
     </li>

@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux'
+import {Redirect} from 'react-router-dom'
 
 function Landing() {
+  const isLogged = useSelector(state => state.isLoggedin);
+
+   if (isLogged===true) {
+        return <Redirect to="/dashboard" />
+    }
     return (
           <div className='landing'>
               <div className='landing-inner'>

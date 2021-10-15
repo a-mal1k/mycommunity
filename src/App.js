@@ -10,6 +10,7 @@ import Landing from './components/Landing'
 import Footer from './components/Footer'
 import Dashboard from './components/Dashboard'
 import store from './store'
+import People from './components/People'
 function App() {
     return (
         <Provider store={store}>
@@ -20,6 +21,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path ="/dashboard" component={Dashboard}/>
+            <Route path="/people" component={People} />
         </Switch>
         <Footer/>
         </BrowserRouter>

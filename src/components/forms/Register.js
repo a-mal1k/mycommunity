@@ -30,13 +30,12 @@ function Register() {
             location:'',
             password:''
         })
-     dispatch(register())
-     console.log("in register component inside submit button"+isLogged);
+     dispatch(register(formData))
+
       };
       if (isLogged===true) {
         return <Redirect to="/dashboard" />
     }
-    console.log("in register component"+isLogged);
     return (
         <div className="landing">
             <div className="inner">

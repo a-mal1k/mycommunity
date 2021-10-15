@@ -14,23 +14,20 @@ function Login() {
     
       const { email, password } = formData;
     
-      const onChange = e =>
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+      const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
     
       const onSubmit = e => {
         e.preventDefault();
-        console.log(formData);
+          console.log(formData);
         setFormData({
           email:'',
           password:''
         })
-        dispatch(login());
-        console.log("in login component inside submit button"+isLogged);
-      };
-    console.log("in login component"+isLogged)
+        dispatch(login(formData));
+        }
       if (isLogged===true) {
         return <Redirect to="/dashboard" />
-    }
+      }
     return (
         <div className="landing">
             <div className="inner">
@@ -48,7 +45,7 @@ function Login() {
             onChange={onChange}
             autoComplete="off"
             required
-          />
+          /> 
         </div>
         <div className="form-group">
           <input
