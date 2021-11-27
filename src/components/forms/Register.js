@@ -17,8 +17,10 @@ function Register() {
     
       const { name,email, mobile, location, password } = formData;
     
-      const onChange = e =>
+      const onChange = e =>{
         setFormData({ ...formData, [e.target.name]: e.target.value });
+      }
+        
     
       const onSubmit = e => {
         e.preventDefault();
@@ -58,7 +60,7 @@ function Register() {
         <div className="form-group">
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Enter your Email Address"
             name="email"
             value={email}
             autoComplete="off"
@@ -89,7 +91,7 @@ function Register() {
         <div className="form-group">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             name="password"
             value={password}
             onChange={onChange}
